@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-jayani-staging
+  labels:
+    environmentId: env_f82038a9-37d8-463a-b8ae-3a397f981115
+    projectId: project_2114d41b-c03c-493c-9940-7a11fce4f083
+    projectName: test-jayani
+    environmentName: staging
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
