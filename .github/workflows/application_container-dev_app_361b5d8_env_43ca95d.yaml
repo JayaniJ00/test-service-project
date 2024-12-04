@@ -67,7 +67,7 @@ jobs:
                 
       - name: 'Run :: Install Semgrep, Scan and Print'
         run: >-
-          docker run -i -v "${PWD}:/src" semgrep/semgrep semgrep /src --json
+          docker run -i -v "${PWD}:/src" semgrep/semgrep semgrep / --json
           --quiet > semgrep_results.json
       - name: 'Run :: Upload Code Scan Report'
         run: |2-
