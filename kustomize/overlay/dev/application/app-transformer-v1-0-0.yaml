@@ -25,10 +25,10 @@ spec:
       credentialId: credential_3ecc19c0-ace1-420a-a694-80a2fd1d590f
       commitDetails:
         commitHash: 67ad174a0ebbefe2194bdc11c62b522e7aa95e1a
-        commitAvatar: https://github.com/skyu-v2-dev[bot].png
-        commitTime: '2024-12-04T03:21:39Z'
-        commitMessage: Commit release settings json
-        commitUser: skyu-v2-dev[bot]
+        commitTime: ''
+        commitUser: ''
+        commitAvatar: https://github.com/.png
+        commitMessage: ''
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
