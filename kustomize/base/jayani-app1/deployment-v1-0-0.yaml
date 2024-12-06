@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jayani-app1-v1-0-0
+  labels:
+    app: jayani-app1-v1-0-0
+    applicationId: app_1c727e80-0e42-4d06-ad8c-e658d8dfbcd1
+    version: v1.0.0
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_2114d41b-c03c-493c-9940-7a11fce4f083
+  annotations:
+    reloader.stakater.com/auto: 'true'
+spec:
+  selector:
+    matchLabels:
+      app: jayani-app1-v1-0-0
+  template:
+    metadata:
+      labels:
+        app: jayani-app1-v1-0-0
+        applicationId: app_1c727e80-0e42-4d06-ad8c-e658d8dfbcd1
+        version: v1.0.0
+        organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+        projectId: project_2114d41b-c03c-493c-9940-7a11fce4f083
