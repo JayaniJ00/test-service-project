@@ -25,8 +25,8 @@ spec:
           periodSeconds: 30
           failureThreshold: 30
           httpGet:
-            path: /health-path
-            port: 8080
+            path: /health
+            port: 80
             httpHeaders: []
       name: application-main
       imagePullPolicy: Always
