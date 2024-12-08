@@ -8,22 +8,17 @@ metadata:
     skyu.io/ingress.provider: nginx
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
     nginx.ingress.kubernetes.io/affinity-mode: balanced
-    nginx.ingress.kubernetes.io/backend-protocol: http
-    nginx.ingress.kubernetes.io/permanent-redirect-code: '301'
     nginx.ingress.kubernetes.io/proxy-body-size: 500m
+    nginx.ingress.kubernetes.io/backend-protocol: http
     nginx.ingress.kubernetes.io/session-cookie-hash: sha1
     nginx.ingress.kubernetes.io/session-cookie-name: route
-    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
     nginx.ingress.kubernetes.io/whitelist-source-range: 0.0.0.0/0
-  labels:
-    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
-    projectId: project_2114d41b-c03c-493c-9940-7a11fce4f083
-    applicationId: app_0371aea6-c32b-4157-bc43-d9ef3853b024
-    environmentId: env_43ca95d8-7ff2-4f86-bc6f-349495bc3960
+    nginx.ingress.kubernetes.io/permanent-redirect-code: '301'
 spec:
   tls:
-    - secretName: secret1
+    - secretName: secret5
       hosts:
         - '8080'
   rules:
