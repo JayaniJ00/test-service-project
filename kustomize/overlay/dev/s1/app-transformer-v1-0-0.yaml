@@ -26,6 +26,16 @@ spec:
       imageRegistry: docker.io/s1
       imagePullSecretName: imagepull-docker
       credentialId: credential_3ecc19c0-ace1-420a-a694-80a2fd1d590f
+    - name: container1
+      imagePullPolicy: Always
+      imageRegistry: jay/
+      applicationPorts: []
+      cpuRequestMili: 100
+      cpuLimitMili: 2000
+      memoryRequestMb: 100
+      memoryLimitMb: 1000
+      command: []
+      args: []
   minReplicas: 1
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
