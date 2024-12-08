@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: 5dcc6cfda3400d21735e6fa4a0fad6957fb4f858
+    - imageTag: 14f4da92b700436c9ae73209a75b3a4360a1fa05
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -50,10 +50,10 @@ spec:
       imagePullSecretName: imagepull-docker
       credentialId: credential_3ecc19c0-ace1-420a-a694-80a2fd1d590f
       commitDetails:
-        commitHash: 5dcc6cfda3400d21735e6fa4a0fad6957fb4f858
+        commitHash: 14f4da92b700436c9ae73209a75b3a4360a1fa05
         commitAvatar: https://github.com/skyu-v2-dev[bot].png
-        commitTime: '2024-12-08T08:49:19Z'
-        commitMessage: Deploy application to dev
+        commitTime: '2024-12-08T08:50:07Z'
+        commitMessage: Creating prometheus rule in dev
         commitUser: skyu-v2-dev[bot]
   minReplicas: 1
   maxReplicas: 1
