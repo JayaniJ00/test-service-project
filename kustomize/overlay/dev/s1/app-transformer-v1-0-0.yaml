@@ -20,7 +20,17 @@ spec:
         - port: 80
           targetPort: 80
           protocol: TCP
-      healthChecks: []
+      healthChecks:
+        - probeType:
+            - readinessProbe
+          initialDelaySeconds: 30
+          timeoutSeconds: 30
+          periodSeconds: 30
+          failureThreshold: 30
+          httpGet:
+            path: /health-path
+            port: 8080
+            httpHeaders: []
       name: s1-main
       imagePullPolicy: Always
       imageRegistry: docker.io/s1
