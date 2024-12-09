@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: 004aeff882bad9791888487de8875b24c302d302
+    - imageTag: de94a41919ef05156bc328f9a96eea0807e5960e
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -50,10 +50,10 @@ spec:
       imagePullSecretName: imagepull-docker
       credentialId: credential_3ecc19c0-ace1-420a-a694-80a2fd1d590f
       commitDetails:
-        commitHash: 004aeff882bad9791888487de8875b24c302d302
+        commitHash: de94a41919ef05156bc328f9a96eea0807e5960e
         commitAvatar: https://github.com/skyu-v2-dev[bot].png
-        commitTime: '2024-12-09T09:13:08Z'
-        commitMessage: Deploy application to dev
+        commitTime: '2024-12-09T09:13:40Z'
+        commitMessage: Initiate helm3 application
         commitUser: skyu-v2-dev[bot]
   minReplicas: 1
   maxReplicas: 1
