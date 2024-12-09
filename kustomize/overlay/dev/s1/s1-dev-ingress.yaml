@@ -18,7 +18,7 @@ metadata:
     nginx.ingress.kubernetes.io/permanent-redirect-code: '301'
 spec:
   tls:
-    - secretName: secret5
+    - secretName: secret4
       hosts:
         - '8080'
   rules:
