@@ -1,0 +1,55 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: promotheusdev
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: ./
+      reconcileStrategy: ChartVersion
+      version: '*'
+      sourceRef:
+        kind: GitRepository
+        name: promotheusdev
+      valuesFiles:
+      - .gitignore
+  interval: 5m0s
+  releaseName: promotheusdev
+  uninstall:
+    keepHistory: false
+  valuesFrom:
+  - kind: Secret
+    name: promotheusdev-secret
+    valuesKey: db
+    targetPath: db
+  postRenderers:
+  - kustomize:
+      patches:
+      - target:
+          group: apps
+          version: v1
+          kind: Deployment
+        patch: '[{"op":"add","path":"/spec/template/metadata/labels/organizationId","value":"org_6de1b366-9da6-4d55-b363-f5a2c4382016"},{"op":"add","path":"/spec/template/metadata/labels/projectId","value":"project_2114d41b-c03c-493c-9940-7a11fce4f083"},{"op":"add","path":"/spec/template/metadata/labels/helmId","value":"443"}]'
+      - target: {}
+        patch: '[{"op":"add","path":"/metadata/labels/organizationId","value":"org_6de1b366-9da6-4d55-b363-f5a2c4382016"},{"op":"add","path":"/metadata/labels/projectId","value":"project_2114d41b-c03c-493c-9940-7a11fce4f083"},{"op":"add","path":"/metadata/labels/helmId","value":"443"}]'
+      - target:
+          group: batch
+          version: v1
+          kind: Job
+        patch: '[{"op":"add","path":"/spec/template/metadata/labels/organizationId","value":"org_6de1b366-9da6-4d55-b363-f5a2c4382016"},{"op":"add","path":"/spec/template/metadata/labels/projectId","value":"project_2114d41b-c03c-493c-9940-7a11fce4f083"},{"op":"add","path":"/spec/template/metadata/labels/helmId","value":"443"}]'
+      - target:
+          group: batch
+          version: v1
+          kind: CronJob
+        patch: '[{"op":"add","path":"/spec/jobTemplate/metadata/labels/organizationId","value":"org_6de1b366-9da6-4d55-b363-f5a2c4382016"},{"op":"add","path":"/spec/jobTemplate/metadata/labels/projectId","value":"project_2114d41b-c03c-493c-9940-7a11fce4f083"},{"op":"add","path":"/spec/jobTemplate/metadata/labels/helmId","value":"443"}]'
+      - target:
+          group: batch
+          version: v1
+          kind: CronJob
+        patch: '[{"op":"add","path":"/spec/jobTemplate/spec/template/metadata/labels/organizationId","value":"org_6de1b366-9da6-4d55-b363-f5a2c4382016"},{"op":"add","path":"/spec/jobTemplate/spec/template/metadata/labels/projectId","value":"project_2114d41b-c03c-493c-9940-7a11fce4f083"},{"op":"add","path":"/spec/jobTemplate/spec/template/metadata/labels/helmId","value":"443"}]'
+      - target:
+          group: apps
+          version: v1
+          kind: StatefulSet
+        patch: '[{"op":"add","path":"/spec/template/metadata/labels/organizationId","value":"org_6de1b366-9da6-4d55-b363-f5a2c4382016"},{"op":"add","path":"/spec/template/metadata/labels/projectId","value":"project_2114d41b-c03c-493c-9940-7a11fce4f083"},{"op":"add","path":"/spec/template/metadata/labels/helmId","value":"443"}]'

@@ -1,0 +1,13 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: promotheusdev
+  namespace: default
+spec:
+  interval: 1m0s
+  url: https://github.com/JayaniJ00/test-service-project
+  ref:
+    branch: master
+  secretRef:
+    name: promotheusdev
+  timeout: 60s
