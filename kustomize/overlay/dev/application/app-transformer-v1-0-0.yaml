@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: efd0b9b34626781e1f25a871a12c4b9832e65166
+    - imageTag: 3d922046a192cbcb05ce004eef3d1a8fff244899
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -50,10 +50,10 @@ spec:
       imagePullSecretName: imagepull-docker
       credentialId: credential_3ecc19c0-ace1-420a-a694-80a2fd1d590f
       commitDetails:
-        commitHash: efd0b9b34626781e1f25a871a12c4b9832e65166
+        commitHash: 3d922046a192cbcb05ce004eef3d1a8fff244899
         commitAvatar: https://github.com/skyu-v2-dev[bot].png
-        commitTime: '2024-12-10T05:06:57Z'
-        commitMessage: helm chart promotheus-dev1 added
+        commitTime: '2024-12-10T05:08:33Z'
+        commitMessage: Deploy application to dev
         commitUser: skyu-v2-dev[bot]
   minReplicas: 1
   maxReplicas: 1
