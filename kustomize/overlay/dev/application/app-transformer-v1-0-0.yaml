@@ -8,7 +8,7 @@ metadata:
         path: skyu-app-transformer
 spec:
   applicationContainers:
-    - imageTag: 93a1ab9b5dbbf29e17fce3b7838e48b34a6dbcf9
+    - imageTag: 3a13b6a03205dcfbd7045945bcc60cdfd7c9da45
       cpuRequestMili: 100
       cpuLimitMili: 150
       memoryRequestMb: 350
@@ -50,9 +50,9 @@ spec:
       imagePullSecretName: imagepull-docker
       credentialId: credential_3ecc19c0-ace1-420a-a694-80a2fd1d590f
       commitDetails:
-        commitHash: 93a1ab9b5dbbf29e17fce3b7838e48b34a6dbcf9
+        commitHash: 3a13b6a03205dcfbd7045945bcc60cdfd7c9da45
         commitAvatar: https://github.com/skyu-v2-dev[bot].png
-        commitTime: '2024-12-11T02:09:14Z'
+        commitTime: '2024-12-11T02:10:14Z'
         commitMessage: Deploy application to dev
         commitUser: skyu-v2-dev[bot]
   minReplicas: 1
