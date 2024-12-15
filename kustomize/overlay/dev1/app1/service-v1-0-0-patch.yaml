@@ -1,17 +1,15 @@
-apiVersion: autoscaling/v2
-kind: HorizontalPodAutoscaler
+apiVersion: v1
+kind: Service
 metadata:
   annotations: {}
-  name: app1-v1-0-0
   labels:
     app: app1-v1-0-0
     applicationId: app_aa9ea4b3-c760-42a7-b4c0-c0e85d44edd5
     version: v1.0.0
     organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
     projectId: project_2114d41b-c03c-493c-9940-7a11fce4f083
-    environmentId: env_43ca95d8-7ff2-4f86-bc6f-349495bc3960
+    environmentId: env_40bd25fa-325e-4119-95cf-3916c73fee34
+  name: app1-v1-0-0
 spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: app1-v1-0-0
+  selector:
+    app: app1-v1-0-0
