@@ -2,7 +2,7 @@ name: helmnew_helm-dev_app_5fec5a5_env_d3c9b73 Pipeline (Skyu Generated)
 'on':
   push:
     branches:
-      - master
+      - madu
     paths-ignore:
       - .github/workflows/**
       - .trivyignore
